@@ -113,7 +113,7 @@ function StatCard({
             <span className="text-gray-500  text-xs ml-1">vs last week</span>
           </div>
         </div>
-        <div className="p-3 bg-gray-100  rounded-full">{icon}</div>
+        <div className="p-2 bg-gray-100 h-12  rounded-full">{icon}</div>
       </div>
     </Card>
   )
