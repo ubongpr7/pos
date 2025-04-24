@@ -56,7 +56,7 @@ export default function Header() {
 
   const handleLogout = async () => {
     try {
-      await logoutApi().unwrap()
+      await logoutApi('').unwrap()
       dispatch(logout())
       router.push("/login")
     } catch (error) {
@@ -151,11 +151,11 @@ export default function Header() {
           </button>
 
           {userMenuOpen && (
-            <div className="absolute right-0 mt-2 w-48 bg-white  rounded-md shadow-lg py-1 z-10 border ">
-              <a href="/profile" className="block px-4 py-2 text-sm hover:bg-gray-100 ">
+            <div className="absolute right-0 mt-2 w-48 bg-white   rounded-md shadow-lg py-1 z-10 border ">
+              <a href="/profile" className="block text-gray-900 px-4 py-2 text-sm hover:bg-gray-100 ">
                 Profile
               </a>
-              <a href="/settings" className="block px-4 py-2 text-sm hover:bg-gray-100 ">
+              <a href="/settings" className="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100 ">
                 Settings
               </a>
               <button
