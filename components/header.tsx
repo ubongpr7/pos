@@ -56,7 +56,7 @@ export default function Header() {
 
   const handleLogout = async () => {
     try {
-      await logoutApi('').unwrap()
+      await logoutApi({}).unwrap()
       dispatch(logout())
       router.push("/login")
     } catch (error) {
