@@ -56,17 +56,7 @@ export function middleware(request: NextRequest) {
   // Get the token from the cookies
   const token = request.cookies.get("accessToken")?.value || ""
 
-  // Redirect logic
-  if (isPublicPath && token && path !== "/membership/verification") {
-    // If user is logged in and tries to access a public path (except verification),
-    // redirect to dashboard
-    return NextResponse.redirect(new URL("/membership/dashboard", request.url))
-  }
-
-  if (!isPublicPath && !token) {
-    // If user is not logged in and tries to access a protected path, redirect to login
-    return NextResponse.redirect(new URL("/membership/portal", request.url))
-  }
+  
 
   return NextResponse.next()
 }
